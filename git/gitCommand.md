@@ -1,6 +1,7 @@
 ```
     git config --global user.name "username"               // 全局配置用户名,无global只在本地仓库有效
     git config --global user.email "useremail"             // 配置邮箱
+    ssh-keygen -t rsa -C "email"                           // 生成秘钥
     git init                                               // 初始化一个git仓库
     git add filename1 filename2                            // 将filename添加到暂存区
     git add -A                                             // 将所有修改添加到暂存区
@@ -17,7 +18,6 @@
     git checkout -- filename                               // 丢弃文件的修改恢复成暂存区或版本库
     git reset HEAD filename                                // 暂存区的修改恢复到工作区
     git clone address                                      // 克隆代码到本地
-    ssh-keygen -t rsa -C "email"                           // 生成秘钥
     git remote add origin address                          // 关联远程库
     git branch -u origin/remoteBranchName localBranchName  // 关联远程分支
     git pull                                               // 从远程库拉代码并合并
@@ -34,6 +34,8 @@
     git branch                                             // 查看本地分支
     git branch -r                                          // 查看远程分支
     git branch -a                                          // 查看所有分支
+    git remote show origin                                 // 查看远程本地分支相关
+    git remote prune origin                                // 删除远程删除的无用分支
     git merge otherBranchName                              // 将其他与当前分支合并(不保留历史)
     git merge --no-ff -m "message" otherBranchName         // 保留合并分支历史
     git branch -d branchName                               // 删除分支(已合并)

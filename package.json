@@ -8,11 +8,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wangliqun123/notes.git"
+    "url": "git+https://github.com/GaleLQ/notes.git"
   },
   "author": "Gale",
   "bugs": {
-    "url": "https://github.com/wangliqun123/notes/issues"
+    "url": "https://github.com/GaleLQ/notes/issues"
   },
-  "homepage": "https://github.com/wangliqun123/notes#readme"
+  "homepage": "https://github.com/GaleLQ/notes#readme"
 }
