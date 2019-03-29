@@ -53,3 +53,11 @@
     git push origin -d remoteBranchName                    // 删除远程分支
     git push origin :remoteBranchName                      // 同上
 ```
+
+### others
+#### 配置全局.gitignore
+- 根目录下.*gitconfig*文件添加
+  ```bash
+  [core]
+  excludesfile = /Users/gale/.gitignore
+  ```
