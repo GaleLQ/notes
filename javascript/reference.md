@@ -38,3 +38,39 @@ arr.every(callback[, thisArg])
 callback(currentValue, index, arr)
 ```
 - 所有数组依次找到第一个使callback返回false，否则返回true
+# fill
+```bash
+arr.fill(value[, start[, end]])
+```
+- 用一个固定值填充一个数组中从起始索引到终止索引内的全部元素
+- 改变了原始数组
+# filter
+```bash
+var newArray = arr.filter(callback(element[, index[, array]])[, thisArg])
+```
+- 创建一个新数组, 其包含通过所提供函数实现的测试的所有元素
+# find
+```bash
+arr.find(callback[, thisArg])
+```
+- 返回数组中满足提供的测试函数的第一个元素的值。否则返回 undefined
+# findIndex
+```bash
+arr.findIndex(callback[, thisArg])
+```
+- 返回数组中满足提供的测试函数的第一个元素的索引。否则返回-1
+# flat
+```bash
+var newArray = arr.flat(depth) // default depth = 1
+```
+# flatMap
+```bash
+var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {}[, thisArg])
+```
+- 先map数组再flat一层
+# forEach
+```bash
+arr.forEach(callback[, thisArg])
+```
+- 对数组的每个元素执行一次提供的函数
+- 
