@@ -62,6 +62,7 @@ arr.findIndex(callback[, thisArg])
 # flat
 ```bash
 var newArray = arr.flat(depth) // default depth = 1
+- 按照一个可指定的深度递归遍历数组，并将所有元素与遍历到的子数组中的元素合并为一个新数组返回
 ```
 # flatMap
 ```bash
@@ -73,4 +74,36 @@ var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {}
 arr.forEach(callback[, thisArg])
 ```
 - 对数组的每个元素执行一次提供的函数
-- 
+- 不可执行中break
+# includes
+```bash
+arr.includes(valueToFind[, fromIndex])
+```
+- 判断一个数组是否包含一个指定的值
+# indexOf
+```bash
+arr.indexOf(searchElement[, fromIndex = 0])
+```
+- 返回在数组中可以找到一个给定元素的第一个索引，如果不存在，则返回-1
+# join
+```bash
+arr.join([separator])
+```
+- 将一个数组（或一个类数组对象）的所有元素用separator连接成一个字符串
+# keys
+```bash
+arr.keys()
+```
+- 返回一个包含数组中每个索引键的Array Iterator对象
+# lastIndexOf
+```bash
+arr.lastIndexOf(searchElement[, fromIndex = arr.length - 1])
+```
+- 返回指定元素在数组中的最后一个的索引
+# map
+```bash
+var new_array = arr.map(function callback(currentValue[, index[, array]]) {}[, thisArg])
+Array.prototype.map.call('Hello world', (x) => {})
+["1", "2", "3"].map(parseInt)
+```
+- 该数组中的每个元素都调用一个提供的函数后返回的结果的数组
