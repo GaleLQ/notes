@@ -14,6 +14,8 @@
     git log                                                // 查看历史commitId
     git log --graph                                        // 并查看分支图
     git reset --hard commitId                              // 恢复到相应的commit版本
+    git reset --soft commitId                              // 恢复到相应的commit版本,commit前
+    git reset --mixed commitId                             // 恢复到相应的commit版本, add前
     git reflog                                             // 查看reset和commit历史操作的commitId
     git checkout -- filename                               // 丢弃文件的修改恢复成暂存区或版本库
     git reset HEAD filename                                // 暂存区的修改恢复到工作区
