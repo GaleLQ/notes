@@ -107,3 +107,92 @@ Array.prototype.map.call('Hello world', (x) => {})
 ["1", "2", "3"].map(parseInt)
 ```
 - 该数组中的每个元素都调用一个提供的函数后返回的结果的数组
+# pop
+```bash
+var lastValue = arr.pop()
+```
+- 从数组中删除最后一个元素,并返回该元素的值,此方法更改数组的长度
+- 若无返回undefined
+# push
+```
+arr.push(element1, ..., elementN)
+```
+- 将一个或多个元素添加到数组的末尾，并返回该数组的新长度
+# reduce/reduceRight
+```
+arr.reduce(callback(accumulator, currentValue[, index[, array]])[, initialValue])
+```
+- 数组中的每个元素执行一个由您提供的reducer函数，将其结果汇总为单个返回值。
+- 空数组且无initialValue将报错,一个值将返回这个值,不执行函数
+# reverse
+```
+arr.reverse()
+```
+- 将数组中元素的位置颠倒，并返回该数组
+- 该方法会改变原数组
+# shift
+```
+arr.shift()
+```
+- 从数组中删除第一个元素，并返回该元素的值
+- 该方法会改变原数组
+# slice
+```
+arr.slice([begin[, end]])
+```
+- 返回一个原数组的浅拷贝,左闭右开
+- -n表示从又开始第n个
+# some
+```
+arr.some(callback(element[, index[, array]])[, thisArg])
+```
+- 返回是否至少有一个让函数返回true的布尔值
+# sort
+```
+arr.sort([compareFunction(firstEl, secondEl)])
+```
+- 用原地算法(数组改变)或根据compareFunction排序数组并返回
+- 默认逐位比较元素转换成字符串后的Unicode位点(10前于2)
+- compareFunction返回值
+        - 小于0,a前于b
+        - 大于0,b前于a
+        - 等于0或返回其他,不变
+# splice
+```
+array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
+```
+- 从start开始删除deleteCount个并填入item
+- 返回delete的元素数组,改变原数组
+- deleteCount绝对值大于数组长度,则从开始或结束开始处理
+# toLocaleString
+```
+arr.toLocaleString([locales[,options]]);
+```
+- 将元素按照各自的方法转成字符串后,返回用特定语言环境的字符串(例如,)拼接的字符串
+- 详情见不同类型的此方法
+# toString
+```
+arr.toString()
+```
+- 返回一个表示数组及其元素的字符串
+- 作为文本值或者进行字符串连接操作时,将会自动调用其toString方法
+# unshift
+```
+arr.unshift(element1, ..., elementN)
+```
+- 将一个或多个元素添加到数组的开头，并返回该数组的新长度
+# values
+```
+arr.values()
+```
+- 返回一个新的Array Iterator对象，该对象包含数组中每个索引的值组成的数组(entries是键值对)
+# @@iterator
+```
+arr[Symbol.iterator]()
+```
+- 默认与values()返回值相同
+# Array[@@species]
+```
+Array[Symbol.species]
+```
+- 访问器属性返回Array的构造函数
