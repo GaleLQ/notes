@@ -62,3 +62,4 @@ typings/
 
 # webstorm settings
 .idea/
+nestjs/notes.md
