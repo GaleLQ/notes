@@ -63,3 +63,5 @@ typings/
 # webstorm settings
 .idea/
 # nestjs/notes.md
+
+.DS_Store
