@@ -9,6 +9,12 @@
 // process.env 包含用户环境的对象
 // process.exit([code]) 以退出状态 code 指示 Node.js 同步地终止进程
 // process.memoryUsage() 内存使用情况的对象
+//     {
+//       rss: 17502208, // 驻留集,进程总物理内存
+//       heapTotal: 4210688,// V8
+//       heapUsed: 2088912,// V8
+//       external: 634511 // v8 js管理的C++占用
+// }
 // process.nextTick(callback[, ...args]) 见事件循环
 // process.pid 进程的 PID
 // process.ppid 父进程的 PID
