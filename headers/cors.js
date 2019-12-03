@@ -1,5 +1,6 @@
 // 当一个资源从与该资源本身所在的服务器不同的域,协议或端口请求一个资源时,资源会发起一个跨域HTTP请求
 // cors时,可能对服务器数据产生副作用的HTTP请求方法发起OPTIONS
+// 大部分情况请求已发出,但是访问不到被拦截了
 
 // Access-Control-Allow-Origin 服务器允许域,携带cookie时为了安全不可通配
 // Access-Control-Expose-Headers 允许浏览器getResponseHeader()获取的额外头,默认只有基本的几个
