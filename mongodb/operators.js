@@ -49,4 +49,10 @@
 
 // $comment 将注释与表达式关联写入profile log
 
+// Projection
+// $ 拿出数组字段达到条件的元素 // TODO 没效果
+// $eleMatch 与上相同,区别是$只支持一个筛选条件 // TODO 没效果
+// $meta 与text索引连用 // TODO
+// $slice 字段数组返回子数组
+
 // 
