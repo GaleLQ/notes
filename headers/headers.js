@@ -1,0 +1,13 @@
+// Accept(req) 告知服务器客户端可以处理的MIME类型及权重
+// Accept-Charset(req) 告知服务器客户端可以处理的MIME类型及权重
+// Accept-Encoding(req) 告知服务器客户端可以处理的内容编码格式(压缩算法)
+// Accept-Language(req) 告知服务器客户端可以处理的语言
+// Accept-Range(res) 说明自己是否支持范围请求及单位
+// Access-Control-Allow-Credentials(res) 浏览器是否拦截带Credentials请求的响应
+// Access-Control-Allow-Headers(res) 预检请求中,允许正式请求除基本头以外的头信息
+// Access-Control-Allow-Methods(res) 预检请求中,允许正式请求的方法
+// Access-Control-Allow-Origin(res) 资源允许的origin
+// Access-Control-Expose-Headers(res) 允许跨域请求访问的非简单header
+// Access-Control-Max-Age(res) 预检请求返回信息的有效期
+// Access-Control-Request-Headers(req) 告知服务器实际请求携带的请求头
+// Access-Control-Request-Method(req) 告知服务器实际请求携带的方法

@@ -2,6 +2,7 @@
 // 大多数情况下都是针对字段值或者字段数组中的值判断是否符合要求
 // 多个操作符嵌套使用注意兼容情况
 
+// Query
 // Comparison
 // Syntax: { field: { $operator: value | [value] } }
 // $eq 相等,引用类型相等注意顺序
@@ -54,5 +55,17 @@
 // $eleMatch 与上相同,区别是$只支持一个筛选条件 // TODO 没效果
 // $meta 与text索引连用 // TODO
 // $slice 字段数组返回子数组
+
+// Update
+// Field
+// $currentDate 指定字段设置为当前时间
+// $inc 字段加指定值
+// $min 指定值小于原来则设定(bson compare)
+// $max 指定值大于原来则设定
+// $mul 字段乘指定值
+// $rename 重命名字段,unset后set
+// $set 更新或设置一个字段
+// $setOnInsert upsert真时不存在则更新
+// $unset 删除字段
 
 // 
