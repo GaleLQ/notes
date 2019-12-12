@@ -68,4 +68,33 @@
 // $setOnInsert upsert真时不存在则更新
 // $unset 删除字段
 
+// Array
+// $(update) 更新时,数组筛选匹配条件时,数组中的第一个匹配这个条件的元素
+// $[] 更新时,数组中的所有匹配这个条件的元素
+// $[element] 更新时,通过arrayFilters自定义筛选数组更新
+// $addToSet 将一个或多个值($each)添加进集合数组(互异性)
+// $push 将一个或多个值($each)添加进数组(position默认尾部),同时sort,slice等,
+// $pop 移除字段数组数组第一或最后一个元素
+// $pull 移除字段数组自定义筛选部分
+// $pullAll 移除一个或多个指定值
+// $each 配合addToSet和push
+// $position 配合$push,必须有$each
+// $slice 配合$push,必须有$each
+// $sort 配合$push,必须有$each,嵌套子属性不可排
+
+// Bitwise
+// $bit 使用指定值与相应字段进行按位and,or,xor操作
+
+// Aggregation
+// Stages
+// $addFields 添加新字段(可通过现有字段)
+// $bucket (aggregation) 将集合分组处理输出(groupBy, boundaries, default, output,  $facet)
+// $bucketAuto 自动分成若干组进行处理输出
+// $collStats (aggregation)
+// $count 文档的数量
+// $currentOp (aggregation) 数据库
+// $facet (aggregation) 同一输入执行多个aggregation
+// $geoNear (aggregation) 距离指定点从近到远输出
+// $graphLookup (aggregation) 递归嵌套搜索并且按照关系返回(如单表自查询)
+
 // 
