@@ -121,7 +121,7 @@
 
 // Operators
 // $abs 数字的绝对值
-// $acos 余弦弧度$acosh,$asin,$asinh,$atan,$atan2,$atanh,$cos,$degreesToRadians,$radiansToDegrees
+// $acos 余弦弧度$acosh,$asin,$asinh,$atan,$atan2,$atanh,$cos,$degreesToRadians,$radiansToDegrees,$sin,$tan
 // $add 将数字或日期相加
 // $addToSet 在$group中,将字段加进集合
 // $allElementsTrue
@@ -136,7 +136,7 @@
 // $concat 连接这个数组里面的字符串
 // $concatArrays 连接这个数组里面的数组
 // $cond 根据条件返回不同的结果
-// $convert 转化为特定的类型
+// $convert 转化为特定的类型(简写$toBool,$toDate,$toDecimal,$toDouble,$toInt,$toLong,$toObjectId,$toString,$toLower,$toUpper)
 // $dateFromParts 根据特定格式返回时间
 // $dateToParts 把时间细化成不同的部分
 // $dateFromString 根据特殊字符串转换成时间
@@ -155,8 +155,8 @@
 // $ifNull 如果为null设置代替值
 // $in 一个值是否在数组中
 // $indexOfArray 返回指定元素在数组中的index
-// $indexOfBytes 返回指定元素在字符串(UTF-8byte)中的index(注意多byte字)
-// $indexOfCP 返回指定元素在字符串(code point)中的index(常用)
+// $indexOfBytes 返回指定元素在字符串字节位置中的index
+// $indexOfCP 返回指定元素在字符串代码点中的index
 // $isArray 判断是否为数组
 // $isoDayOfWeek 国际标准一周的第几天
 // $isoWeek 国际标准一年的第几周
@@ -187,3 +187,50 @@
 // $pow 指定数的n次方
 // $push $group中(仅)字段推进数组
 // $range 根据两个数字范围和指定间隔生成数组
+// $reduce reduce(js reduce), $$value累加器的值,$$this当前的值
+// $regexFind 正则表达式的第一个匹配项(类似match)
+// $regexFindAll 正则表达式的所有匹配项(类似match)
+// $regexMatch 检测是否匹配(类似test)
+// $reverseArray 将数组反转
+// $round 任意位置取整(5取近偶)
+// $rtrim 移除右边space或自定义的字符
+// $second 分钟的第几秒
+// $setDifference 差集,两个数组
+// $setEquals 返回几个数组集合化是否相同的布尔值
+// $setIntersection 几个数组交集
+// $setIsSubset 判断是否是子集
+// $setUnion 并集
+// $size 数组的长度
+// $slice 数组的slice
+// $split 字符串的split
+// $sqrt 数字开平方
+// $stdDevPop 估算总体方差
+// $stdDevSamp 估算样本方差
+// $strcasecmp 比较大小写不敏感的字符串
+// $strLenBytes 返回一个字符串的字节数
+// $strLenCP 返回一个字符串的代码点数
+// $substr 同substrBytes,被弃用
+// $substrBytes 根据字节索引范围选子串
+// $substrCP 根据代码点索引范围选子串
+// $subtract 将两个数字或者日期做差运算
+// $sum 求和
+// $switch 条件匹配执行(类似js switch)
+// $trim 移除两边space或自定义的字符
+// $trunc 数字截断(不像round四舍五入)
+// $type 返回相应的类型
+// $week 一年的第几周
+// $year 日期的年份
+// $zip 分别拿出多个数组的第一个,第二个...(transpose)
+
+// Modifiers
+// $comment 见query
+// $explain 模拟真实操作返回操作的些信息(索引等)
+// $hint 强制使用指定的索引
+// $max 强制使用最大值范围指定的索引
+// $maxTimeMS 限制游标操作最大的毫秒数
+// $min 强制使用最x小值范围指定的索引
+// $orderby sort
+// $query query
+// $returnKey
+// $showDiskLoc 显示结果在磁盘上的位置
+// $natural 不使用索引,所以更快
