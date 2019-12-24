@@ -71,4 +71,5 @@
 // 优化器使用的条件比较苛刻,查看优化器
 
 
-// 
+// Strategies
+// read more /manual/core/index-intersection/ /manual/applications/indexes/
