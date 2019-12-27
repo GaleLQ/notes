@@ -1,1 +1,1 @@
-# Notes
+# JUST NOTES NOT TUTORIALS
