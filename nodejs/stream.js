@@ -3,7 +3,7 @@
 // Duplex(eg:net.Socket)
 // Transform(eg:zlib.createDeflate())
 // writable.writableBuffer,readable.readableBuffer查看缓冲区信息
-// highWaterMark 字节的总数,2的幂动态改变,默认64 * 1024
+// highWaterMark 字节的总数,2的幂动态改变,默认64 * 1024,(setEncoding()调用后会通过字节比较,注意多字节字符情况)
 // readable.push(chunk), writable.write() 放入缓冲区,返回true则未满highWaterMark
 // Duplex和Transform维护者两个独立的内部缓冲区
 
@@ -64,3 +64,12 @@
 // Duplex
 // 实现Readable和Writable的流,完全独立
 // TCP socket, zlib流,crypto流
+
+// Transform
+// TCP socket, zlib流,crypto流
+// transform.destroy([error]) 销毁流,可选的触发error或close事件
+
+// stream
+// stream.finished(stream[, options], callback) 出错时(当流不再可读、可写、或遇到错误、或过早关闭事件时，则该函数会获得通知)
+// stream.pipeline(...streams, callback) 管道式的传送多个流,当完成时调用callback
+// stream.Readable.from(iterable, [options]) 实现了异步迭代器的操作

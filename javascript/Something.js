@@ -45,4 +45,7 @@
 // delete typeof void(执行表达式返回undefined) in instanceof this new super 
 // Comprehensions(实验性质,暂无,2019.12)
 
-// 
+// 二进制 0B(0b)开头
+// 八进制 0(0o es6后)开头(后面小于8否则被当成10)
+// 十六进制 0x 开头
+// 指数10幂 E(e) 2e6(2000000)
