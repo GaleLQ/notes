@@ -1,0 +1,2 @@
+// rejectionhandled 在reject函数处理该rejection之后会派发此事件
+// unhandledrejection 没有提供reject函数来处理该rejection时会派发此事件

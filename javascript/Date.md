@@ -1,4 +1,5 @@
 # Date
+## Date对象以1970.1.1毫秒数来存储日期
 ```
 new Date();
 new Date(value);
