@@ -18,4 +18,27 @@
 // 类表达式 class关键字,和function类似(但不提升)
 // function* 表达式
 // in 属性沿原型链是否能找到
+// instanceof 构造函数的prototype是否出现在对象的原型链上(TODO string等字面量值类型不符合规则有点奇怪)
+// new运算符 相当于a = new Object();a.__proto__ = A.prototype;A.call(a);返回A的返回(A返回对象类型)或者返回a(A返回非对象类型)
+// new.target 检测函数属否是通过new调用的,new调用时返回函数的指针(继承返回继承的,即this指向现在),正常调用时返回undefined
 
+// super 有继承的干净的自己
+// 子类的构造函数中super()时,生成一个干净的this,类似创建子类的this = new B();所以要在this之前显式调用,
+// 普通函数或子类的静态方法中,相当于有继承的干净的自己super.__proto__ === this.__proto__,this为调用者(子类也是当时的调用者)
+
+// this 指向运行时的对象,全局指向全局对象(window or global,严格模式指向undefined)
+// mdn说非对象调用call,apply会new String()等转化,typeof测试未转化,持怀疑态度
+// bind 创建一个this被永久固定的原函数的复制函数(不可再被变)
+// 箭头函数没有this,所以永远引用创建时的this,所以call等也无从谈起
+
+// typeof typeof()
+// 返回未经计算的操作数类型的字符串
+// undefined object boolean number bigint string symbol function object
+// null为object(null大多为0x00与object的类型标签0重复),正则object,类function
+// 除了TDZ(let,const),永远不会抛出错误
+// 例外: document.all返回undefined,但ECMA规范要求自定义不能与已有的相同
+
+// void运算符 对给定的表达式进行求值,然后返回undefined,(常用小技巧javascript:void(0), () => void doSomething())
+
+// yield 暂停和恢复一个生成器函数,[rv] = yield [expression]
+// yield* 表达式用于委托给另一个generator或可迭代对象,yield*返回后面表达式的返回值(Generator的return)
