@@ -50,8 +50,8 @@
 // 十六进制 0x 开头
 // 指数10幂 E(e) 2e6(2000000)
 
-// '\xA9' \x后面会被认为是十六进制数
-// '\u00A9' \u后面四位16进制,更多'\u{2F804}'括起来(等于'\uD87E\uDC04')
+// '\xA9' \x后面会被认为是十六进制数(十六进制转义序列)
+// '\u00A9' \u后面四位16进制(Unicode转义序列),更多'\u{2F804}'括起来(等于'\uD87E\uDC04',Unicode编码转义)
 
 // Intl 提供了语言敏感的字符串比较，数字格式化和日期时间格式化功能(Collator, NumberFormat, 和 DateTimeFormat)
 
@@ -81,3 +81,8 @@
 
 // 引用计数(循环引用无法回收),标记-清除(对象是否可以获得)
 
+// 自动分号补全:空语句、let、const、import、export、表达式语句、debugger、continue、break、throw、return
+
+// 关于可枚举性判断,https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties
+
+// Hashbang注释:以#!开头且仅在脚本或模块的绝对开头有效,指定特定JavaScript解释器的路径要用于执行脚本
