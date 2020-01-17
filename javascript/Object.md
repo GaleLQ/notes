@@ -1,4 +1,5 @@
 # Object
+## es6以来,保留了key为字符串的插入顺序
 ## 关于对象属性的可枚举与判断见[here](!https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
 ## constructor
 - 实例.constructor = 原型对象.constructor = 构造函数
