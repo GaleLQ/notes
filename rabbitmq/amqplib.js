@@ -37,3 +37,5 @@
 // ifEmpty 还有消息不删除
 
 // channel.purgeQueue(queue) 清除队列内的消息,已经被处理的不清除
+
+// 
