@@ -9,7 +9,7 @@
 // do...while
 // empty ;表示的空语句
 // export 从模块中导出(默认导出和命名导出)供import,导出为严格模式
-// for
+// for 外面和()里面和{}里面形成三个单独作用域
 // for await...of await一下可迭代对象每个值(常用异步生成器)
 // for...in 遍历对象和其原型链上除Symbol的可枚举属性(不保证键顺序),Object.getOwnPropertyNames自己全部,Object.keys自己可枚举
 // for...of在可迭代对象上根据定义创建一个迭代循环(重复使用生成器无效)
