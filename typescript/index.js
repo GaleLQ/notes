@@ -12,7 +12,7 @@
 
 // 接口
 // 对类的一部分行为进行抽象或对象的行为进行抽象
-// 接口可以继承(extends)接口,继承(extends)类
+// 接口可以继承(extends)接口,继承(extends)类,继承type
 // 重复定义取并集
 // 赋值的时候必须与接口保持一致(不可多不可少)
 // interface Person {
@@ -71,9 +71,10 @@
 // typeScript核心库的定义文件中定义了所有浏览器环境需要用到的类型
 // Node.js不是内置对象的一部分 npm install @types/node --save-dev
 
-// 类型别名 type 常用于联合
-
+// 类型别名 type 
 // 字符串字面量 type Temp = 'a' | 'b' | 'c'
+
+// 交叉类型 type A = B & C; 同时满足两个类型(extends)
 
 // 元组
 // 特定类型组合的数组

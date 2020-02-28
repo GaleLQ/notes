@@ -13,6 +13,7 @@
 // import * as a from 'b' 导入所有
 // import a from 'b' 配合default使用
 // import()函数动态加载返回promise(类似require的异步操作)
+// import 不执行，只有导入内容被当作变量用的话才执行
 
 // nodejs v13.2 支持import(package.json)
 // 原commonjs的变量(__filename等)不存在,无外层函数,process可获取
