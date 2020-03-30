@@ -3,28 +3,37 @@ const PENGING = 'PENDING';
 const FULFILLED = 'FULFILLED';
 const REJECTED = 'REJECTED';
 class Promise {
+    // 初始化promise
     constructor(fn) {
+        // 表示promise的三种状态，待定中,已成功,已拒绝
         this._status = PENGING;
+        // 表示成功状态执行的函数数组，同步调用数组里面的所有函数
         this._fulfilledQueues = []
+        // 表示失败状态执行的函数数组，同步调用数组里面的所有函数
         this._rejectedQueues = []
+        // 表示promise的值
         this._value = undefined
 
         try {
-            // 函数的两个参数都是函数
+            // 初始化时同步执行fn函数,传入两个函数参数
             fn(this._resolve.bind(this), this._rejected.bind(this));
         } catch (err) {
+            // 传入的函数执行过程出错，promise变为已拒绝，且传递错误消息
             this._rejected(err);
         }
     }
-
+    // 传入的值是promise，则当前promise的值依赖于传入的promise
+    // 传入的是值，则顺序执行成功队列里面的函数
     _resolve(value) {
+        // 整体包起来函数内容，为了方便表示异步调用
         // 这里注意用的箭头函数,所以下文this是没问题的
         const run = () => {
+            // 如果status已经有结果，则调用resolve无效
             if (this._status !== PENGING) {
                 return;
             }
 
-            // 定义两个执行成功和失败队列的函数
+            // 封装两个执行成功和失败队列的函数
             const runFulfilled = value => {
                 let cb;
                 while (cb = this._fulfilledQueues.shift()) {
@@ -38,7 +47,7 @@ class Promise {
                 }
             }
 
-            // 如果传入的value是一个promise,则当前的promise依赖于传入的promise
+            // 如果传入的value是一个promise,则当前的promise的值和状态依赖于传入的promise
             if (value instanceof Promise) {
                 value.then(
                     val => {
@@ -52,13 +61,15 @@ class Promise {
                         runRejected(err);
                     }
                 )
+            } else {
+                runFulfilled(value);
             }
         }
 
         // 异步调用哦
         setTimeout(run, 0);
     }
-
+    // 执行拒绝队列里面的函数
     _reject(err) {
         if (this._status !== PENDING) {
             return;
@@ -77,6 +88,8 @@ class Promise {
     }
 
     // 重点
+    // 如果status待定，则将函数加入相应的队列
+    // 如果status成功，则执行这个函数拿到返回值(返回promise则promise的值)作为当前promise的值
     then(onFulfilled, onRejected) {
         return new Promise((resolve, reject) => {
             const { _status, _value } = this;
@@ -123,11 +136,11 @@ class Promise {
             }
         })
     }
-
+    // 当作then的语法糖
     catch(reject) {
         return this.then(undefined, reject);
     }
-
+    // promise完成或拒绝后执行这个函数
     finally(finallyFn) {
         // 执行了函数之后再返回其值
         return this.then(
@@ -143,6 +156,7 @@ class Promise {
     }
 
     // 常用于promise和非promise全转化为promise的情况
+    // 传入promise则直接返回，传入值则生成一个新的promise
     static resolve(value) {
         if (value instanceof Promise) {
             return value;
@@ -152,10 +166,10 @@ class Promise {
     }
 
     static reject(value) {
-        // 不管是不是promise都包一层,哪怕是reject的promise(可能是因为不好直接判断吧)
+        // 不管是不是promise都包一层,哪怕是reject的promise
         return new Promise((r, re) => re(value));
     }
-
+    // 等待所有promise都完成
     static all(arr) {
         return new Promise((r, re) => {
             const tempArr = [];
