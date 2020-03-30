@@ -37,7 +37,7 @@
 //     (x: number, y: number): number
 // }
 // 支持重载
-// function reverse(x: number): number;
+// function reverse(x: number): number; // 可用interface快速实现
 // function reverse(x: string): string;
 // function reverse(x: number | string): number | string {
 //  // 函数实现
@@ -66,7 +66,7 @@
 // 声明文件位置: 1.npm包自带的(package中找) 2.发布到@types下面的 3.自己写的(tsconfig.json里配置)
 // npm包中的声明文件与本地全局声明文件的区别
 // export导出的npm包文件才会被别人使用
-// 非常建议使用interface可以被其他人拓展
+// 非常建议使用interface可以被其他人拓展,interface编译后自动消失，class不行
 
 // 内置对象
 // typeScript核心库的定义文件中定义了所有浏览器环境需要用到的类型
@@ -82,9 +82,10 @@
 // 越界的元素必须是已知类型的联合
 
 // 枚举
-// 枚举值默认从零开始,可以手动赋值其他类型
+// 枚举值默认从零开始,可以手动赋值其他类型(小心覆盖)
 // 非编译期间的计算所得枚举项后面不可以有其他项
-// const enum定义的常数枚举只可用其作为数字
+// const enum定义的常量枚举不生成变量,直接用枚举里面的属性代替,因此常量枚举效率高(preserveConstEnums可强制生成)
+// 可以用namespace和export给枚举增加额外的类型
 
 // 类
 // 可以使用修饰符public(默认),private,protected
