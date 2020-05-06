@@ -87,6 +87,8 @@
 // $bit 使用指定值与相应字段进行按位and,or,xor操作
 
 // Aggregation
+// 注意用真实的数据库名
+// id注意用ObjectI格式化一下，否则无效
 // Stages
 // $addFields 添加新字段(可通过现有字段)
 // $bucket 将集合根据某字段范围分组处理输出(groupBy, boundaries, default, output,  $facet)
