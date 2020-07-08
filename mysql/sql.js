@@ -21,4 +21,9 @@
 // LIKE 与WHERE配合使用, %匹配任意个任意字符,_任意单个字符
 // UNION 用于多个select的对应列合并去重(UNION ALL不去重)
 // ORDER BY field1，field2 按照所给的字段排序,ASC升序默认，DESC降序
-// 
+// GROUP BY HAVING 分组，COUNT,SUM,AVG,WITH ROLLUP分组后的和
+// JOIN ON 连接 INNER JOIN等于JOIN等值连接,LEFT JOIN左连接,RIGHT JOIN右连接
+// IS NULL 和 IS NOT NULL 不可用等号
+// REGEXP regexp 正则表达式匹配
+// TRANSACTION处理 BEGIN COMMIT
+// ALTER TABLE tablename ADD col type 修改表DROP,MODIFY,CHANGE等
