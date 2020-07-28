@@ -55,6 +55,7 @@
     git reset --mixed commitId                             // 恢复到相应的commit版本,所有的改动放在工作区，暂存区的也放回工作区(默认可省略--mixed)
     git reset --soft commitId                              // 恢复到相应的commit版本,所有的改动放在暂存区
     git reset --hard commitId                              // 恢复到相应的commit版本,所有的改动丢弃
+    git revert commitId                                    // 创建个新commit恢复成相应版本(注意reset区别和后面merge的区别)
 
     git tag tagName                                        // 在当前版本库打标签
     git tag                                                // 查看标签
