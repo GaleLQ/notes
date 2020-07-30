@@ -30,7 +30,7 @@
     git remote -v                                          // 显示远程库信息
     git remote add remote-name address                     // 关联远程库
     git fetch [remote-name [remoteBranchName[:localBranchName]]] // 拉取远程所有或指定分支(作为本localBranchName),不合并
-    git pull [remote-name [remoteBranchName[:localBranchName]]] // 拉取且合并
+    git pull [remote-name [remoteBranchName[:localBranchName]]] (--rebase) // 拉取且合并(默认merge,可指定rebase)
     git push remote-name localBranchName:remoteBranchName // 将本地推送到远程
     git push origin :remoteBranchName(git push origin -d remoteBranchName) // 删除远程分支
     git push -u origin localBranchName                    // 关联并推送分支到远程(适合第一次)
@@ -49,7 +49,7 @@
     git branch -D branchName                               // 强制删除分支
     git branch -u remote-name/remoteBranchName localBranchName // 关联远程分支
     git merge otherBranchName(remote-name/branchName)      // 将其他与当前分支合并(保留commit)
-    git rebase rebase-branch branchName                    // 拉取分支最新的代码做基,变基合并，减少commit记录(注意多人操作丢失记录)
+    git rebase rebase-branch branchName                    // 拉取分支最新的代码做基,变基合并，清晰的commit记录(注意多人操作丢失记录)
     git rebase --continue                                  // 如有冲突时相当于更改后的commit
     git rebase —abort                                      // 恢复到rebase之前的状态
     git reset --mixed commitId                             // 恢复到相应的commit版本,所有的改动放在工作区，暂存区的也放回工作区(默认可省略--mixed)
