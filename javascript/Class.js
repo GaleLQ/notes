@@ -12,6 +12,7 @@
 // 私有#name格式
 
 // constructor不调用自动生成,继承时其内部使用this必须调用super
+// 直接调用A()则会调用constructor,A.prototype.constructor等于A(实际是构造函数的语法糖)
 
 // extends A.__proto__ = B
 

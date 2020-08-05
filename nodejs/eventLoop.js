@@ -22,3 +22,6 @@
 //  - check: setImmediate的回调(如有,poll空后立即执行)
 //  - close callbacks: 一些关闭的回调函数,如socket.on('close', ...)
 //  ###每个阶段结束都会先执行process.nextTick,再执行microtasks
+
+// task(宏任务): script(整体代码)、setTimeout、setInterval、I/O、事件、postMessage、 MessageChannel、setImmediate (Node.js)
+// microtasks(微任务): Promise.then、 MutaionObserver、process.nextTick (Node.js)
