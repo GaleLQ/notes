@@ -1,4 +1,4 @@
-// 函数内调用setTimeout建议用箭头函数,避免this问题
+// 函数内调用setTimeout建议用箭头函数,避免this问题(浏览器是window调函数,nodejs是Timeout对象调)
 
 // Immediate类 setImmediate()返回
 // immediate.hasRef() Immediate对象是否保持活动状态

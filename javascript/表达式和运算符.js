@@ -27,8 +27,8 @@
 // 普通函数或子类的静态方法中,相当于有继承的干净的自己super.__proto__ === this.__proto__,this为调用者(子类也是当时的调用者)
 
 // this 指向运行时的对象,全局指向全局对象(window or global,严格模式指向undefined)
-// mdn说非对象调用call,apply会new String()等转化,typeof测试未转化,持怀疑态度
-// bind 创建一个this被永久固定的原函数的复制函数(不可再被变)
+// 非对象调用call,apply,bind会new String() Number()等转化成对象
+// bind 创建一个this被永久固定的原函数的复制函数(不可再被变, 不影响其作为构造)
 // 箭头函数没有this,所以永远引用创建时的this,所以call等也无从谈起
 
 // typeof typeof()
