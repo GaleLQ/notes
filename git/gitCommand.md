@@ -7,7 +7,7 @@
     git config --list                                      // 查看配置
     ssh-keygen -t rsa -C "email"                           // 生成秘钥
     git init                                               // 初始化一个git仓库
-    git clone url myprojectname                            // 克隆代码到本地(可重命名)
+    git clone [-b branch] url [myprojectname]              // 克隆代码到本地(可指定分支,可重命名)
     // 工作区和暂存区
     git status                                             // 查看工作区和暂存区与本地版本库不一样的文件变化
     git add [filename] [dir] [.]                           // 将文件，文件夹，当前所有添加到暂存区
