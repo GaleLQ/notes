@@ -100,7 +100,7 @@
 
 // channel.reject(message, [requeue]) 兼容v2.3.0之前版本nack
 
-// channel.prefetch(message, [requeue]) 设置每个频道同时获取消息的数量
+// channel.prefetch(message, [requeue]) 设置每个队列同时获取消息的数量(3.3之前是一个频道的数量)
 
 // channel.recover() 频道中所有未入队的队列重新入队
 
