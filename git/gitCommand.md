@@ -34,7 +34,7 @@
     git push remote-name localBranchName:remoteBranchName // 将本地推送到远程
     git push origin :remoteBranchName(git push origin -d remoteBranchName) // 删除远程分支
     git push -u origin localBranchName                    // 关联并推送分支到远程(适合第一次)
-    git remote show remote-name                           // 查看远程本地分支相关信息
+    git remote show remote-name                           // 查看远程本地分支相关信息(branch -a不会更新远程不存在的)
     git remote prune remote-name                          // 删除本地在远程已经被删除的无用分支
     git remote rm origin                                  // 切断与远程的连接关系
 
