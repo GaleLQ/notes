@@ -36,7 +36,7 @@
 // readable.readableFlowing 初始null,流动true,暂停false
 // event close 当流或底层文件被关闭时触发
 // event data 切换为流动模式,当有数据被读出时触发(eg: rs.read())
-// event end 流中数据被消费掉之后触发
+// event end 流中数据被消费掉之后触发,(注意ws的finish事件才是整体完成,用end会报错)
 // event error
 // event pause 调用rs.pause()且readsFlowing不为false
 // event readable 从文件读入缓冲区的nextTick触发,最后读空也会触发,并在end之前,存在readable事件时,resume,pipe方法不可用,监听这个事件时,进行第一次从文件中写入缓存
