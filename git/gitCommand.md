@@ -61,6 +61,7 @@
     git tag                                                // 查看标签
     git tag -d tagName                                     // 删除标签
     git push origin --tags                                 // 将标签推送至远程(默认只在本地)
+    git worktree add <path> [<branch>]                     // 基于指定之分支和path生成一份新的代码,用于在不同分支打开多个tab进行开发
 
 ```
 
