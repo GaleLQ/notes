@@ -84,7 +84,7 @@
 
 // channel.sendToQueue(queue, content, [options]) 绕过路由交换直接向队列发送消息
 
-// channel.consume(queue, msg => {}, [options]) 消费队列的消息
+// channel.consume(queue, msg => {}, [options]) 消费队列的消息,会按照注册顺序平均发送给每个consumer
 
 // channel.cancel(consumerTag) 不向这个consumer发送消息
 
