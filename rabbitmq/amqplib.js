@@ -24,7 +24,7 @@
 
 // channel.assertQueue([queue, [options]]) 确保队列存在(不存在则创建),初始化用的
 // queue 隐式自动分配一个名字
-// exclusive 排他队列,默认false,只当前的connection可见(可多个channel),自动删除不受durable影响
+// exclusive 排他队列,默认false,只当前的connection可见(可多个channel),自动删除(durable无效),多个连接不可建立同名
 // durable 持久化,默认为true
 // autoDelete 有过消费者且所有消费者断开连接则删除队列,默认false
 // 返回{ queue: 'foobar', messageCount: 0, consumerCount: 0 }格式
