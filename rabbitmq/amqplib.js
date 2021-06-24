@@ -88,7 +88,7 @@
 
 // channel.cancel(consumerTag) 不向这个consumer发送消息
 
-// channel.get(queue, [options]) 从mq中消费一个消息
+// channel.get(queue, [options]) 从mq中消费一个消息(不建议,底层是consume再断开)
 
 // channel.ack(message, [allUpTo]) 确认收到消息
 
